@@ -1,0 +1,38 @@
+# Assignment: ASSIGNMENT 3
+# Name: Holmes, Kevin
+# Date: 2021-12-17
+
+library(ggplot2)
+theme_set(theme_minimal())
+
+setwd("/Users/kevin/Documents/GitHub/dsc520")
+
+heights_df <- read.csv("data/r4ds/heights.csv")
+
+
+ggplot(heights_df,aes(x=height,y=earn)) + geom_point()
+
+ggplot(heights_df,aes(x=age,y=earn)) + geom_point()
+
+ggplot(heights_df,aes(x=ed,y=earn)) + geom_point()
+
+
+ggplot(heights_df,aes(x=height,y=earn)) + geom_point() + geom_smooth()
+
+ggplot(heights_df,aes(x=age,y=earn)) + geom_point() + geom_smooth()
+
+ggplot(heights_df,aes(x=ed,y=earn)) + geom_point() + geom_smooth()
+
+ggplot(heights_df, aes(x=height, y=earn, col=sex)) + geom_point()
+
+
+ggplot(heights_df, aes(x=height, y=earn, col=sex)) + geom_point() + ggtitle("Height vs. Earnings") + xlab("Hight(Inches)") + ylab("Earnings(Dollars)")
+
+
+ggplot(heights_df, aes(x=earn)) + geom_histogram()
+
+
+ggplot(heights_df, aes(earn)) + geom_histogram(bins=10)
+
+
+ggplot(heights_df, aes(earn)) +  geom_density()
